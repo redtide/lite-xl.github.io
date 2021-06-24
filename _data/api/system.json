@@ -1,0 +1,829 @@
+[
+    {
+        "file_path": "data/api/system.lua",
+        "classes": [
+            {
+                "name": "system",
+                "name_in_source": "system",
+                "methods": [
+                    {
+                        "name": "poll_event",
+                        "short_desc": "",
+                        "desc": "Core function used to retrieve the current event been triggered by SDL.\n\nThe following is a list of event types emitted by this function and\nthe arguments for each of them if applicable.\n\nWindow events:\n* \"quit\"\n* \"resized\" -> width, height\n* \"exposed\"\n* \"minimized\"\n* \"maximized\"\n* \"restored\"\n* \"focuslost\"\n\nFile events:\n* \"filedropped\" -> filename, x, y\n\nKeyboard events:\n* \"keypressed\" -> key_name\n* \"keyreleased\" -> key_name\n* \"textinput\" -> text\n\nMouse events:\n* \"mousepressed\" -> button_name, x, y, amount_of_clicks\n* \"mousereleased\" -> button_name, x, y\n* \"mousemoved\" -> x, y, relative_x, relative_y\n* \"mousewheel\" -> y\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "type",
+                                "type": {
+                                    "id": "string"
+                                }
+                            },
+                            {
+                                "desc": "? arg1",
+                                "type": {
+                                    "id": "any"
+                                }
+                            },
+                            {
+                                "desc": "? arg2",
+                                "type": {
+                                    "id": "any"
+                                }
+                            },
+                            {
+                                "desc": "? arg3",
+                                "type": {
+                                    "id": "any"
+                                }
+                            },
+                            {
+                                "desc": "? arg4",
+                                "type": {
+                                    "id": "any"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1185,
+                        "stop_char": 1216
+                    },
+                    {
+                        "name": "wait_event",
+                        "short_desc": "",
+                        "desc": "Wait until an event is triggered.\n\nof a second, eg: 0.01\n",
+                        "params": [
+                            {
+                                "name": "timeout",
+                                "desc": "Amount of seconds, also supports fractions",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "status True on success or false if there was an error.",
+                                "type": {
+                                    "id": "boolean"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1439,
+                        "stop_char": 1477
+                    },
+                    {
+                        "name": "set_cursor",
+                        "short_desc": "",
+                        "desc": "Change the cursor type displayed on screen.\n",
+                        "params": [
+                            {
+                                "name": "type",
+                                "desc": "Can be: \"arrow\", \"ibeam\", \"sizeh\", \"sizev\", \"hand\"",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1610,
+                        "stop_char": 1645
+                    },
+                    {
+                        "name": "set_window_title",
+                        "short_desc": "",
+                        "desc": "Change the window title.\n",
+                        "params": [
+                            {
+                                "name": "title",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1709,
+                        "stop_char": 1751
+                    },
+                    {
+                        "name": "set_window_mode",
+                        "short_desc": "",
+                        "desc": "Change the window mode.\n",
+                        "params": [
+                            {
+                                "name": "mode",
+                                "desc": "Can be: \"normal\", \"minimized\", \"maximized\", \"fullscreen\"",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1870,
+                        "stop_char": 1910
+                    },
+                    {
+                        "name": "get_window_mode",
+                        "short_desc": "",
+                        "desc": "Retrieve the current window mode.\n\n\"normal\", \"minimized\", \"maximized\", \"fullscreen\"",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "mode Will return one of the followings:",
+                                "type": {
+                                    "id": "string"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 2071,
+                        "stop_char": 2107
+                    },
+                    {
+                        "name": "set_window_bordered",
+                        "short_desc": "",
+                        "desc": "Toggle between bordered and borderless.\n",
+                        "params": [
+                            {
+                                "name": "bordered",
+                                "desc": "",
+                                "type": {
+                                    "id": "boolean"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 2190,
+                        "stop_char": 2238
+                    },
+                    {
+                        "name": "set_window_hit_test",
+                        "short_desc": "",
+                        "desc": "When then window is run borderless (without system decorations), this\nfunction allows to set the size of the different regions that allow\nfor custom window management.\n",
+                        "params": [
+                            {
+                                "name": "title_height",
+                                "desc": "",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "controls_width",
+                                "desc": "This is for minimize, maximize, close, etc...",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "resize_border",
+                                "desc": "The amount of pixels reserved for resizing",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 2614,
+                        "stop_char": 2697
+                    },
+                    {
+                        "name": "get_window_size",
+                        "short_desc": "",
+                        "desc": "Get the size and coordinates of the window.\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "width",
+                                "type": {
+                                    "id": "number"
+                                }
+                            },
+                            {
+                                "desc": "height",
+                                "type": {
+                                    "id": "number"
+                                }
+                            },
+                            {
+                                "desc": "x",
+                                "type": {
+                                    "id": "number"
+                                }
+                            },
+                            {
+                                "desc": "y",
+                                "type": {
+                                    "id": "number"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 2849,
+                        "stop_char": 2885
+                    },
+                    {
+                        "name": "set_window_size",
+                        "short_desc": "",
+                        "desc": "Sets the size and coordinates of the window.\n",
+                        "params": [
+                            {
+                                "name": "width",
+                                "desc": "",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "height",
+                                "desc": "",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "x",
+                                "desc": "",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "y",
+                                "desc": "",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 3034,
+                        "stop_char": 3089
+                    },
+                    {
+                        "name": "window_has_focus",
+                        "short_desc": "",
+                        "desc": "Check if the window currently has focus.\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "",
+                                "type": {
+                                    "id": "boolean"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 3165,
+                        "stop_char": 3202
+                    },
+                    {
+                        "name": "show_fatal_error",
+                        "short_desc": "",
+                        "desc": "Opens a message box to display an error message.\n",
+                        "params": [
+                            {
+                                "name": "title",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "message",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 3316,
+                        "stop_char": 3367
+                    },
+                    {
+                        "name": "chdir",
+                        "short_desc": "",
+                        "desc": "Change the current directory path which affects relative file operations.\nThis function raises an error if the path doesn't exists.\n",
+                        "params": [
+                            {
+                                "name": "path",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 3541,
+                        "stop_char": 3571
+                    },
+                    {
+                        "name": "mkdir",
+                        "short_desc": "",
+                        "desc": "Create a new directory, note that this function doesn't recursively\ncreates the directories on the given path.\n\n",
+                        "params": [
+                            {
+                                "name": "directory_path",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "created True on success or false on failure.",
+                                "type": {
+                                    "id": "boolean"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 3803,
+                        "stop_char": 3843
+                    },
+                    {
+                        "name": "list_dir",
+                        "short_desc": "",
+                        "desc": "Gets a list of files and directories for a given path.\n\n",
+                        "params": [
+                            {
+                                "name": "path",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "list List of directories or nil if empty or error.",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "custom",
+                                            "name": "table"
+                                        },
+                                        {
+                                            "id": "nil"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "desc": "? message Error message in case of error.",
+                                "type": {
+                                    "id": "string"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 4073,
+                        "stop_char": 4106
+                    },
+                    {
+                        "name": "absolute_path",
+                        "short_desc": "",
+                        "desc": "Converts a relative path from current directory to the absolute one.\n\n",
+                        "params": [
+                            {
+                                "name": "path",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 4236,
+                        "stop_char": 4274
+                    },
+                    {
+                        "name": "get_file_info",
+                        "short_desc": "",
+                        "desc": "Get details about a given file or path.\n\n",
+                        "params": [
+                            {
+                                "name": "path",
+                                "desc": "Can be a file or a directory path",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "info Path details or nil if empty or error.",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "custom",
+                                            "name": "FileInfo"
+                                        },
+                                        {
+                                            "id": "nil"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "desc": "? message Error message in case of error.",
+                                "type": {
+                                    "id": "string"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 4519,
+                        "stop_char": 4557
+                    },
+                    {
+                        "name": "get_clipboard",
+                        "short_desc": "",
+                        "desc": "Retrieve the text currently stored on the clipboard.\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 4644,
+                        "stop_char": 4678
+                    },
+                    {
+                        "name": "set_clipboard",
+                        "short_desc": "",
+                        "desc": "Set the content of the clipboard.\n",
+                        "params": [
+                            {
+                                "name": "text",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 4750,
+                        "stop_char": 4788
+                    },
+                    {
+                        "name": "get_time",
+                        "short_desc": "",
+                        "desc": "Get amount of iterations since the application was launched\nalso known as SDL_GetPerformanceCounter() / SDL_GetPerformanceFrequency()\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "",
+                                "type": {
+                                    "id": "number"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 4960,
+                        "stop_char": 4989
+                    },
+                    {
+                        "name": "sleep",
+                        "short_desc": "",
+                        "desc": "Sleep for the given amount of seconds.\n",
+                        "params": [
+                            {
+                                "name": "seconds",
+                                "desc": "Also supports fractions of a second, eg: 0.01",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 5115,
+                        "stop_char": 5148
+                    },
+                    {
+                        "name": "exec",
+                        "short_desc": "",
+                        "desc": "Similar to os.execute() but hides the commmand prompt on windows and\ndoes not return the exit status of the executed command.\n",
+                        "params": [
+                            {
+                                "name": "command",
+                                "desc": "The command to execute.",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 5343,
+                        "stop_char": 5375
+                    },
+                    {
+                        "name": "fuzzy_match",
+                        "short_desc": "",
+                        "desc": "Generates a matching score depending on how well the value of the\ngiven needle compares to that of the value in the haystack.\n\nof the haystack, eg: with a haystack \"/my/path/to/file\" and a needle\n\"file\", will get better score than with this option not set to true.\n",
+                        "params": [
+                            {
+                                "name": "haystack",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "needle",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "file",
+                                "desc": "Reverse the algorithm to prioritize the end",
+                                "type": {
+                                    "id": "boolean"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "score",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 5816,
+                        "stop_char": 5870
+                    },
+                    {
+                        "name": "set_window_opacity",
+                        "short_desc": "",
+                        "desc": "Change the opacity (also known as transparency) of the window.\n\nthe less visible the window will be.",
+                        "params": [
+                            {
+                                "name": "opacity",
+                                "desc": "A value from 0.0 to 1.0, the lower the value",
+                                "type": {
+                                    "id": "number"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 6060,
+                        "stop_char": 6106
+                    }
+                ],
+                "short_desc": "",
+                "desc": "\n\nCore utilites functionality for managing current window, files and more.",
+                "usage": "",
+                "inherits_from": [],
+                "fields": []
+            },
+            {
+                "name": "FileInfo",
+                "name_in_source": "FileInfo",
+                "methods": [],
+                "short_desc": "",
+                "desc": "\n",
+                "usage": "",
+                "inherits_from": [],
+                "fields": [
+                    {
+                        "name": "modified",
+                        "desc": "A timestamp in seconds.",
+                        "type": {
+                            "id": "number"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "name": "size",
+                        "desc": "Size in bytes.",
+                        "type": {
+                            "id": "number"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "name": "type",
+                        "desc": "Can be \"file\" or \"dir\"",
+                        "type": {
+                            "id": "string"
+                        },
+                        "visibility": "public"
+                    }
+                ]
+            }
+        ],
+        "functions": [],
+        "data": [],
+        "name": "unknown",
+        "is_class_mod": false,
+        "short_desc": "",
+        "desc": "",
+        "usage": ""
+    }
+]

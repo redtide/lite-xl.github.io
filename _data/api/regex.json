@@ -1,0 +1,135 @@
+[
+    {
+        "file_path": "data/api/regex.lua",
+        "classes": [
+            {
+                "name": "regex",
+                "name_in_source": "regex",
+                "methods": [
+                    {
+                        "name": "compile",
+                        "short_desc": "",
+                        "desc": "Compiles a regular expression pattern that can be used to search in strings.\n\nValid modifiers are:\n* i - Case insesitive matching\n* m - Multiline matching, by default matching is done on first line only\nso this option allows to match more than one line.\n* s - Match all characters including new lines, by default the dot (.)\nmetacharacter doesn't matches the new line (\\n) character, this\noption allows to also match them.\n\nmessage if compiling the pattern failed.",
+                        "params": [
+                            {
+                                "name": "pattern",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "options",
+                                "desc": "A string of one or more pattern modifiers.",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "regex Ready to use regular expression object or error",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "custom",
+                                            "name": "regex"
+                                        },
+                                        {
+                                            "id": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1566,
+                        "stop_char": 1610
+                    },
+                    {
+                        "name": "cmatch",
+                        "short_desc": "",
+                        "desc": "Search a string for valid matches and returns a list of matching offsets.\n\nregex.NOTBOL | regex.NOTEMPTY\n",
+                        "params": [
+                            {
+                                "name": "subject",
+                                "desc": "The string to search for valid matches.",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "offset?",
+                                "desc": "The position on the subject to start searching.",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "options?",
+                                "desc": "A bit field of matching options, eg:",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "list List of offsets where a match was found.",
+                                "type": {
+                                    "id": "dict",
+                                    "key_type": {
+                                        "id": "custom",
+                                        "name": "integer"
+                                    },
+                                    "value_type": {
+                                        "id": "custom",
+                                        "name": "integer"
+                                    }
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 2025,
+                        "stop_char": 2075
+                    }
+                ],
+                "short_desc": "",
+                "desc": "\n\nProvides the base functionality for regular expressions matching.",
+                "usage": "",
+                "inherits_from": [],
+                "fields": []
+            }
+        ],
+        "functions": [],
+        "data": [],
+        "name": "unknown",
+        "is_class_mod": false,
+        "short_desc": "",
+        "desc": "",
+        "usage": ""
+    }
+]

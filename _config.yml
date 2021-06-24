@@ -42,11 +42,14 @@ plugins:
 - jekyll-sitemap
 
 name: "Lite XL"
+project: "lite-xl"
 url: "https://lite-xl.github.io"
 description: "Lite XL IDE Website"
 spdx_license_id: "Apache-2.0"
 
 repository:
+  owner_url: "https://github.com/lite-xl"
+  branch:    "master"
   plugins:
     url: "https://github.com/lite-xl/lite-plugins"
 

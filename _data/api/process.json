@@ -1,0 +1,454 @@
+[
+    {
+        "file_path": "data/api/process.lua",
+        "classes": [
+            {
+                "name": "process",
+                "name_in_source": "process",
+                "methods": [
+                    {
+                        "name": "new",
+                        "short_desc": "",
+                        "desc": "Create a new process object\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "process"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1781,
+                        "stop_char": 1806
+                    },
+                    {
+                        "name": "strerror",
+                        "short_desc": "",
+                        "desc": "Translates an error code into a useful text message\n\n",
+                        "params": [
+                            {
+                                "name": "code",
+                                "desc": "",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": true,
+                        "visibility": "public",
+                        "start_char": 1920,
+                        "stop_char": 1954
+                    },
+                    {
+                        "name": "start",
+                        "short_desc": "",
+                        "desc": "Start a process\n\nand subsequente elements are parameters for the command.\nprocess is allowed to run on a process:wait(process.WAIT_DEADLINE) call.\n\nnot start or true on success",
+                        "params": [
+                            {
+                                "name": "command_and_params",
+                                "desc": "First index is the command to execute",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "table"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "working_directory?",
+                                "desc": "Path where the command will be launched.",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "deadline?",
+                                "desc": "Maximum time in milliseconds the",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "status Negative integer error code if could",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "custom",
+                                            "name": "integer"
+                                        },
+                                        {
+                                            "id": "boolean"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 2446,
+                        "stop_char": 2520
+                    },
+                    {
+                        "name": "pid",
+                        "short_desc": "",
+                        "desc": "Get the process id.\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "id Process id or 0 if not running.",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 2610,
+                        "stop_char": 2635
+                    },
+                    {
+                        "name": "read",
+                        "short_desc": "",
+                        "desc": "Read from stdout, if the process fails with a ERROR_PIPE it is\nautomatically destroyed, so checking process status with the\nprocess:running() method would be advised.\n\nif nothing was read.\n",
+                        "params": [
+                            {
+                                "name": "len?",
+                                "desc": "Amount of bytes to read.",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "tries?",
+                                "desc": "Retry reading the given amount of times",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "bytes Amount of bytes read or nil if nothing was read.",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "custom",
+                                            "name": "integer"
+                                        },
+                                        {
+                                            "id": "nil"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 3048,
+                        "stop_char": 3084
+                    },
+                    {
+                        "name": "read_errors",
+                        "short_desc": "",
+                        "desc": "Read from stderr, if the process fails with a ERROR_PIPE it is\nautomatically destroyed, so checking process status with the\nprocess:running() method would be advised.\n\nif nothing was read.\n",
+                        "params": [
+                            {
+                                "name": "len?",
+                                "desc": "Amount of bytes to read.",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            },
+                            {
+                                "name": "tries?",
+                                "desc": "Retry reading the given amount of times",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "bytes Amount of bytes read or nil if nothing was read.",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "custom",
+                                            "name": "integer"
+                                        },
+                                        {
+                                            "id": "nil"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 3497,
+                        "stop_char": 3540
+                    },
+                    {
+                        "name": "write",
+                        "short_desc": "",
+                        "desc": "Write to the stdin, if the process fails with a ERROR_PIPE it is\nautomatically destroyed, so checking process status with the\nprocess:running() method would be advised.\n\n\nerror code: process.ERROR_PIPE, process.ERROR_WOULDBLOCK",
+                        "params": [
+                            {
+                                "name": "data",
+                                "desc": "",
+                                "type": {
+                                    "id": "string"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "bytes The amount of bytes written or negative integer",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 3894,
+                        "stop_char": 3925
+                    },
+                    {
+                        "name": "close_stream",
+                        "short_desc": "",
+                        "desc": "Allows you to close a stream pipe that you will not be using.\n\nprocess.STREAM_STDIN, process.STREAM_STDOUT, process.STREAM_STDERR\n\nprocess is not running or stream is already closed.",
+                        "params": [
+                            {
+                                "name": "stream",
+                                "desc": "Could be one of the following:",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "status Negative error code process.ERROR_INVALID if",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 4262,
+                        "stop_char": 4302
+                    },
+                    {
+                        "name": "wait",
+                        "short_desc": "",
+                        "desc": "Wait the specified amount of time for the process to exit.\n\nwill only check if process is running without waiting, also the timeout\ncan be set to:\n* process.WAIT_INFINITE - will wait until the process ends\n* process.WAIT_DEADLINE - will wait until the deadline declared on start()\n\nerror code like process.ERROR_TIMEDOUT",
+                        "params": [
+                            {
+                                "name": "timeout",
+                                "desc": "Time to wait in milliseconds, if 0, the function",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                },
+                                "is_opt": false,
+                                "default_value": ""
+                            }
+                        ],
+                        "returns": [
+                            {
+                                "desc": "exit_status The process exit status or negative integer",
+                                "type": {
+                                    "id": "custom",
+                                    "name": "integer"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 4812,
+                        "stop_char": 4845
+                    },
+                    {
+                        "name": "terminate",
+                        "short_desc": "",
+                        "desc": "Sends SIGTERM to the process\n\nnegative integer error code like process.ERROR_INVALID",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "status Returns true on success or a",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "boolean"
+                                        },
+                                        {
+                                            "id": "custom",
+                                            "name": "integer"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 5012,
+                        "stop_char": 5043
+                    },
+                    {
+                        "name": "kill",
+                        "short_desc": "",
+                        "desc": "Sends SIGKILL to the process\n\nnegative integer error code like process.ERROR_INVALID",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "status Returns true on success or a",
+                                "type": {
+                                    "id": "or",
+                                    "types": [
+                                        {
+                                            "id": "boolean"
+                                        },
+                                        {
+                                            "id": "custom",
+                                            "name": "integer"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 5210,
+                        "stop_char": 5236
+                    },
+                    {
+                        "name": "running",
+                        "short_desc": "",
+                        "desc": "Check if the process is running\n",
+                        "params": [],
+                        "returns": [
+                            {
+                                "desc": "",
+                                "type": {
+                                    "id": "boolean"
+                                }
+                            }
+                        ],
+                        "usage": "",
+                        "is_virtual": false,
+                        "is_abstract": false,
+                        "is_deprecated": false,
+                        "is_static": false,
+                        "visibility": "public",
+                        "start_char": 5303,
+                        "stop_char": 5332
+                    }
+                ],
+                "short_desc": "",
+                "desc": "\n\nFunctionality that allows you to launch subprocesses and read\nor write to them in a non-blocking fashion.",
+                "usage": "",
+                "inherits_from": [],
+                "fields": []
+            }
+        ],
+        "functions": [],
+        "data": [],
+        "name": "unknown",
+        "is_class_mod": false,
+        "short_desc": "",
+        "desc": "",
+        "usage": ""
+    }
+]

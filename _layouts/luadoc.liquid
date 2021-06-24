@@ -1,0 +1,24 @@
+---
+layout: "default"
+---
+{%-assign project_name = site.project-%}
+{%-assign repo_url     = site.repository.owner_url | append: '/' | append: project_name-%}
+{%-assign page_name    = page.name | replace: ".md", ''-%}
+{%-assign api          = site.data.api[page_name][0]-%}
+{%-assign file_url     = repo_url | append: "/blob/" | append: site.repository.branch | append: '/' | append: api.file_path-%}
+{%-assign file_name    = api.file_path | split: '/' | last -%}
+{%-assign class        = api.classes[0]-%}
+
+<h1><a href="{{ file_url }}">{{ file_name }}</a> file reference</h1><hr/>
+
+{{ class.desc }}
+
+<hr/>
+
+{{ content }}
+
+<hr/>
+
+{%-for method in class.methods-%}
+	<p>{{ method.name }} : {{ method.desc | newline_to_br }}</p><hr/>
+{%-endfor-%}
