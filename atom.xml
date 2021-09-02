@@ -4,13 +4,13 @@
 	<link href="https://lite-xl.github.io/lite-xl.github.io/atom.xml" rel="self"/>
 	<icon>https://lite-xl.github.io/lite-xl.github.io/assets/ico/favicon.ico</icon>
 	<link href="https://lite-xl.github.io/lite-xl.github.io/"/>
-	<updated>2021-09-02T14:12:15+00:00</updated>
+	<updated>2021-09-02T14:28:41+00:00</updated>
 	<id>https://lite-xl.github.io/lite-xl.github.io/</id>
 
 	<entry>
 		<title>Documentation Website</title>
 		<author><name>redtide</name></author>
-		<link href="https://lite-xl.github.io/lite-xl.github.io/news/2021/05/29/documentation-website.html"/>
+		<link href="https://lite-xl.github.io/lite-xl.github.io/news/2021/05/29/documentation-website/"/>
 		<published>2021-05-29T09:15:47+00:00</published>
 		<id>https://lite-xl.github.io/lite-xl.github.io/news/2021/05/29/documentation-website</id>
 		<content type="html">&lt;p&gt;Lite XL website.&lt;/p&gt;
