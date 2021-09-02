@@ -1,0 +1,23 @@
+{
+  "footer_copyright": "Copyright",
+  "footer_team": "Lite XL Team",
+  "menu_feed": "Feed",
+  "menu_follow_us": "Follow Us",
+  "menu_news": "News",
+  "menu_search": "Search",
+  "news_archive": "News Archive",
+  "news_archive_content": "Full historical listing of all news posts, sorted by newest first.",
+  "news_at": "at",
+  "news_author": "Author",
+  "news_by": "by",
+  "news_date": "Date",
+  "news_latest": {
+    "text": "Latest News",
+    "title": "Browse the news archives"
+  },
+  "news_post": "Post",
+  "site_scroll_top": "Top",
+  "site_search": "Search",
+  "team_name": "Name",
+  "team_contrib": "Contributions"
+}

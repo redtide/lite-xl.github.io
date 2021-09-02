@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Plugins - Lite XL</title>
+
+		<meta name="author" content="redtide">
+		<meta name="web-author" content="redtide">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Atom Feeds -->
+		<link href="/lite-xl.github.io/atom.xml" rel="alternate" title="News" type="application/atom+xml" />
+
+				<!-- Favicon Generator Icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/lite-xl.github.io/assets/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/lite-xl.github.io/assets/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/lite-xl.github.io/assets/ico/favicon-16x16.png">
+		<link rel="manifest" href="/lite-xl.github.io/assets/ico/site.webmanifest">
+		<link rel="mask-icon" href="/lite-xl.github.io/assets/ico/safari-pinned-tab.svg" color="#302e31">
+		<link rel="shortcut icon" href="/lite-xl.github.io/assets/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#302e31">
+		<meta name="msapplication-config" content="/lite-xl.github.io/assets/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- Stylesheets -->
+		<link href="/lite-xl.github.io/assets/css/style.min.css" rel="stylesheet" media="screen">
+		    <link href="/lite-xl.github.io/assets/css/ekko-lightbox.css" rel="stylesheet">
+
+		<!-- Font Awesome Icons -->
+		<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/solid.js"       integrity="sha384-Mf3ap7OwO+bjTkzM1RsrothLh38uKXvMWJ2TQPXGHqZcqfeI/cyCV+sfV0IDnBDq" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/brands.js"      integrity="sha384-b2GpqFrJizV0BUEdbrITdOA5HnxnlrErt7MlEERWd6NSJ32rHeibEvyyCuA13OAS" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/fontawesome.js" integrity="sha384-EYYaHDhIRoBhd/Ir/1fPnxg9rZLk/55lKtlNT5KrIcONoCS2kjf7ZWzMoCLLACeo" crossorigin="anonymous"></script>
+
+	</head>
+
+	<body>
+
+		<button
+			data-localize="site_scroll_top"
+			onclick="topFunction()"
+			id="scrollButton"
+			title="Go to top"
+		>
+			Top
+		</button>
+		<a href="#content" class="sr-only">Skip to content</a>
+		<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<a
+					id="logo-link"
+					class="navbar-brand"
+					href="/lite-xl.github.io/en/"
+				>
+					<img
+						class="d-inline-block align-top"
+						src="/lite-xl.github.io/assets/img/logo.svg"
+						height="32" alt=""
+					> Lite XL</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-target="#navbarContent"
+					data-toggle="collapse"
+					aria-controls="navbarContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarContent">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+
+	
+		
+		
+						<li class="nav-item dropdown">
+							<a
+								id="navbar_about"
+								class="nav-link dropdown-toggle font-weight-bold"
+								data-localize="menu_about"
+								data-toggle="dropdown"
+								aria-expanded="false"
+								aria-haspopup="true"
+								href="#"
+							>
+								About
+							</a>
+							<div
+								class="dropdown-menu"
+								aria-labelledby="navbar_about"
+							>
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/faq"
+				><i
+						class="fas fa-question fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_faq">FAQ</span>
+				</a>
+			
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/features/"
+				><i
+						class="fas fa-info fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_features">Features</span>
+				</a>
+			
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/screenshots/"
+				><i
+						class="fas fa-image fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_screenshots">Screenshots</span>
+				</a>
+			
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/contributors"
+				><i
+						class="fas fa-users fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_contributors">Contributors</span>
+				</a>
+			
+		
+							</div>
+	
+						</li>
+
+	
+		
+		
+						<li class="nav-item dropdown">
+							<a
+								id="navbar_documentation"
+								class="nav-link dropdown-toggle font-weight-bold"
+								data-localize="menu_documentation"
+								data-toggle="dropdown"
+								aria-expanded="false"
+								aria-haspopup="true"
+								href="#"
+							>
+								Documentation
+							</a>
+							<div
+								class="dropdown-menu"
+								aria-labelledby="navbar_documentation"
+							>
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/usage"
+				><i
+						class="fas fa-book fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_usage">Usage</span>
+				</a>
+			
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/build/"
+				><i
+						class="fas fa-code fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_build">Build</span>
+				</a>
+			
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/keymap"
+				><i
+						class="fas fa-keyboard fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_keymap">Keymap</span>
+				</a>
+			
+		
+							</div>
+	
+						</li>
+
+	
+		
+		
+						<li class="nav-item dropdown">
+							<a
+								id="navbar_plugins"
+								class="nav-link dropdown-toggle font-weight-bold"
+								data-localize="menu_plugins"
+								data-toggle="dropdown"
+								aria-expanded="false"
+								aria-haspopup="true"
+								href="#"
+							>
+								Plugins
+							</a>
+							<div
+								class="dropdown-menu"
+								aria-labelledby="navbar_plugins"
+							>
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/plugins"
+				><i
+						class="fab fa-github fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_repository">Repository</span>
+				</a>
+			
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/plugins-external"
+				><i
+						class="fas fa-link fa-fw"
+						aria-hidden="true"
+					></i>&nbsp;<span data-localize="menu_externals">Externals</span>
+				</a>
+			
+		
+							</div>
+	
+						</li>
+
+	
+		
+		
+						<li class="nav-item dropdown">
+							<a
+								id="navbar_tutorials"
+								class="nav-link dropdown-toggle font-weight-bold"
+								data-localize="menu_tutorials"
+								data-toggle="dropdown"
+								aria-expanded="false"
+								aria-haspopup="true"
+								href="#"
+							>
+								Tutorials
+							</a>
+							<div
+								class="dropdown-menu"
+								aria-labelledby="navbar_tutorials"
+							>
+		
+			
+				
+				<a
+					class="dropdown-item font-weight-bold"
+					href="/lite-xl.github.io/en/tutorials/simple-plugin"
+				><span data-localize="menu_simple_plugin">Simple Plugin</span>
+				</a>
+			
+		
+							</div>
+	
+						</li>
+
+	
+		
+						<li class="nav-item">
+							<a
+								class="nav-link font-weight-bold"
+								data-localize="menu_downloads"
+								href="/lite-xl.github.io/en/downloads/"
+							><i
+								class="fas fa-download fa-fw"
+								aria-hidden="true"
+							></i>&nbsp;Downloads
+							</a>
+	
+						</li>
+
+						<li class="nav-item">
+							<a
+								class="nav-link font-weight-bold"
+								data-localize="menu_search"
+								href="/lite-xl.github.io/search/"
+							>
+							<i class="fas fa-search fa-fw" aria-hidden="true"></i>
+								Search</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article>
+
+						<h1>Plugins</h1>
+
+				<table id="table-plugins" class="table table-sm table-hover" data-toggle="table">
+	<thead>
+		<tr>
+			<th data-field="name" data-sortable="true">
+				<span data-localize="plugin_name">Name</span>
+			</th>
+			<th>
+				<span data-localize="plugin_description">Description</span>
+			</th>
+		</tr>
+	</thead>
+	<tbody><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/autoinsert.lua?raw=1">autoinsert</a></td>
+			<td>Automatically inserts closing brackets and quotes. Also allows selected text to be wrapped with brackets or quotes.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/autosave.lua?raw=1">autosave</a></td>
+			<td>Automatically saves files when they are changed.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/autosaveonfocuslost.lua?raw=1">autosaveonfocuslost</a></td>
+			<td>Automatically saves files that were changed when the main window loses focus by switching to another application.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/autowrap.lua?raw=1">autowrap</a></td>
+			<td>Automatically hardwraps lines when typing.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/bigclock.lua?raw=1">bigclock</a></td>
+			<td>Shows the current time and date in a view with large text (<a href="https://user-images.githubusercontent.com/3920290/82752891-3318df00-9db9-11ea-803f-261d80d5cf53.png">screenshot</a>)</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/bracketmatch.lua?raw=1">bracketmatch</a></td>
+			<td>Underlines matching pair for bracket under the caret (<a href="https://user-images.githubusercontent.com/3920290/80132745-0c863f00-8594-11ea-8875-c455c6fd7eae.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/centerdoc.lua?raw=1">centerdoc</a></td>
+			<td>Centers document's content on the screen (<a href="https://user-images.githubusercontent.com/3920290/82127896-bf6e4500-97ae-11ea-97fc-ba9a552bc9a4.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/colorpreview.lua?raw=1">colorpreview</a></td>
+			<td>Underlays color values (eg. <code>#ff00ff</code> or <code>rgb(255, 0, 255)</code>) with their resultant color. (<a href="https://user-images.githubusercontent.com/3920290/80743752-731bd780-8b15-11ea-97d3-847db927c5dc.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/copyfilelocation.lua?raw=1">copyfilelocation</a></td>
+			<td>Copy file location to clipboard.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/datetimestamps.lua?raw=1">datetimestamps</a></td>
+			<td>Insert date-, time- and date-time-stamps.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/dragdropselected.lua?raw=1">dragdropselected</a></td>
+			<td>Provides basic drag and drop of selected text (in same document).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/eval.lua?raw=1">eval</a></td>
+			<td>Replaces selected Lua code with its evaluated result.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/exec.lua?raw=1">exec</a></td>
+			<td>Runs selected text through shell command and replaces with result.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/ghmarkdown.lua?raw=1">ghmarkdown</a></td>
+			<td>Opens a preview of the current markdown file in a browser window (<a href="https://user-images.githubusercontent.com/3920290/82754898-f7394600-9dc7-11ea-8278-2305363ed372.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/gitstatus.lua?raw=1">gitstatus</a></td>
+			<td>Displays git branch and insert/delete count in status bar (<a href="https://user-images.githubusercontent.com/3920290/81107223-bcea3080-8f0e-11ea-8fc7-d03173f42e33.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/gofmt.lua?raw=1">gofmt</a></td>
+			<td>Auto-formats the current go file, adds the missing imports and the missing return cases.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/hidelinenumbers.lua?raw=1">hidelinenumbers</a></td>
+			<td>Hides the line numbers on the left of documents (<a href="https://user-images.githubusercontent.com/3920290/81692043-b8b19c00-9455-11ea-8d74-ad99be4b9c5f.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/hidestatus.lua?raw=1">hidestatus</a></td>
+			<td>Hides the status bar at the bottom of the window.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/indentguide.lua?raw=1">indentguide</a></td>
+			<td>Adds indent guides (<a href="https://user-images.githubusercontent.com/3920290/79640716-f9860000-818a-11ea-9c3b-26d10dd0e0c0.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_angelscript.lua?raw=1">language_angelscript</a></td>
+			<td>Syntax for the <a href="https://www.angelcode.com/angelscript/">Angelscript</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_batch.lua?raw=1">language_batch</a></td>
+			<td>Syntax for Windows <a href="https://en.wikipedia.org/wiki/Batch_file">Batch Files</a>.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_cmake.lua?raw=1">language_cmake</a></td>
+			<td>Syntax for the CMake build system language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_cpp.lua?raw=1">language_cpp</a></td>
+			<td>Syntax for the <a href="https://isocpp.org/">C++</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_csharp.lua?raw=1">language_csharp</a></td>
+			<td>Syntax for the <a href="http://csharp.net">C#</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_d.lua?raw=1">language_d</a></td>
+			<td>Syntax for the <a href="https://dlang.org/">D</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_dart.lua?raw=1">language_dart</a></td>
+			<td>Syntax for the <a href="https://dart.dev/">Dart</a> programming languiage.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_elixir.lua?raw=1">language_elixir</a></td>
+			<td>Syntax for the <a href="https://elixir-lang.org">Elixir</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_elm.lua?raw=1">language_elm</a></td>
+			<td>Syntax for the <a href="https://elm-lang.org">Elm</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_fe.lua?raw=1">language_fe</a></td>
+			<td>Syntax for the <a href="https://github.com/rxi/fe">fe</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_fennel.lua?raw=1">language_fennel</a></td>
+			<td>Syntax for the <a href="https://fennel-lang.org">fennel</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_gdscript.lua?raw=1">language_gdscript</a></td>
+			<td>Syntax for the <a href="https://godotengine.org/">Godot Engine</a>'s GDScript scripting language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_glsl.lua?raw=1">language_glsl</a></td>
+			<td>Syntax for the <a href="https://www.khronos.org/registry/OpenGL/specs/gl/">GLSL</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_go.lua?raw=1">language_go</a></td>
+			<td>Syntax for the <a href="https://golang.org/">Go</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_hlsl.lua?raw=1">language_hlsl</a></td>
+			<td>Syntax for the <a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl">HLSL</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_hs.lua?raw=1">language_hs</a></td>
+			<td>Syntax for the <a href="https://www.haskell.org/">Haskell</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_java.lua?raw=1">language_java</a></td>
+			<td>Syntax for the <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_jiyu.lua?raw=1">language_jiyu</a></td>
+			<td>Syntax for the <a href="https://github.com/machinamentum/jiyu">jiyu</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_jsx.lua?raw=1">language_jsx</a></td>
+			<td>Syntax for the <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> language for the React framework in JavaScript.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_ksy.lua?raw=1">language_ksy</a></td>
+			<td>Syntax for <a href="http://kaitai.io/">Kaitai</a> struct files.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_liquid.lua?raw=1">language_liquid</a></td>
+			<td>Syntax for <a href="https://shopify.github.io/liquid/">Liquid</a> templating language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_make.lua?raw=1">language_make</a></td>
+			<td>Syntax for the Make build system language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_meson.lua?raw=1">language_meson</a></td>
+			<td>Syntax for the <a href="https://mesonbuild.com">Meson</a> build system language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_moon.lua?raw=1">language_moon</a></td>
+			<td>Syntax for the <a href="https://moonscript.org">MoonScript</a> scripting language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_nim.lua?raw=1">language_nim</a></td>
+			<td>Syntax for the <a href="https://nim-lang.org">Nim</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_objc.lua?raw=1">language_objc</a></td>
+			<td>Syntax for the <a href="https://en.wikipedia.org/wiki/Objective-C">Objective C</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_odin.lua?raw=1">language_odin</a></td>
+			<td>Syntax for the <a href="https://github.com/odin-lang/Odin">Odin</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_perl.lua?raw=1">language_perl</a></td>
+			<td>Syntax for the <a href="https://perl.org">Perl</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_php.lua?raw=1">language_php</a></td>
+			<td>Syntax for the <a href="https://php.net">PHP</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_pico8.lua?raw=1">language_pico8</a></td>
+			<td>Syntax for <a href="https://www.lexaloffle.com/pico-8.php">Pico-8</a> cartridge files.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_powershell.lua?raw=1">language_powershell</a></td>
+			<td>Syntax for <a href="https://docs.microsoft.com/en-us/powershell">PowerShell</a> scripting language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_psql.lua?raw=1">language_psql</a></td>
+			<td>Syntax for the postgresql database access language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_rust.lua?raw=1">language_rust</a></td>
+			<td>Syntax for the <a href="https://rust-lang.org/">Rust</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_ruby.lua?raw=1">language_ruby</a></td>
+			<td>Syntax for the <a href="https://www.ruby-lang.org/">Ruby</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language sass.lua?raw=1">language sass</a></td>
+			<td>Syntax for the <a href="https://sass-lang.com/">Sass</a> CSS preprocessor.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_sh.lua?raw=1">language_sh</a></td>
+			<td>Syntax for shell scripting language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_teal.lua?raw=1">language_teal</a></td>
+			<td>Syntax for the <a href="https://github.com/teal-language/tl">Teal</a> programming language, a typed dialect of Lua..</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_tex.lua?raw=1">language_tex</a></td>
+			<td>Syntax for the <a href="https://www.latex-project.org/">LaTeX</a> typesetting language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_v.lua?raw=1">language_v</a></td>
+			<td>Syntax for the <a href="https://vlang.io/">V</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_wren.lua?raw=1">language_wren</a></td>
+			<td>Syntax for the <a href="http://wren.io/">Wren</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/language_zig.lua?raw=1">language_zig</a></td>
+			<td>Syntax for the <a href="https://ziglang.org/">Zig</a> programming language.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/lfautoinsert.lua?raw=1">lfautoinsert</a></td>
+			<td>Automatically inserts indentation and closing bracket/text after newline.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/linecopypaste.lua?raw=1">linecopypaste</a></td>
+			<td>Copy, cut and paste the current line when nothing is selected.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/lineguide.lua?raw=1">lineguide</a></td>
+			<td>Displays a line-guide at the line limit offset (<a href="https://user-images.githubusercontent.com/3920290/81476159-2cf70000-9208-11ea-928b-9dae3884c477.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/macmodkeys.lua?raw=1">macmodkeys</a></td>
+			<td>Remaps mac modkeys <code>command/option</code> to <code>ctrl/alt</code>.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/markers.lua?raw=1">markers</a></td>
+			<td>Add markers to docs and jump between them quickly (<a href="https://user-images.githubusercontent.com/3920290/82252149-5faaa200-9946-11ea-9199-bea2efb7ee23.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/memoryusage.lua?raw=1">memoryusage</a></td>
+			<td>Show memory usage in the status view.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/motiontrail.lua?raw=1">motiontrail</a></td>
+			<td>Adds a motion-trail to the caret (<a href="https://user-images.githubusercontent.com/3920290/83256814-085ccb00-a1ab-11ea-9e35-e6633cbed1a9.gif">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/openfilelocation.lua?raw=1">openfilelocation</a></td>
+			<td>Opens the parent directory of the current file in the file manager.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/openselected.lua?raw=1">openselected</a></td>
+			<td>Opens the selected filename or url.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/rainbowparen.lua?raw=1">rainbowparen</a></td>
+			<td>Show nesting of parentheses with rainbow colours.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/restoretabs.lua?raw=1">restoretabs</a></td>
+			<td>Keep a list of recently closed tabs, and restore the tab in order on cntrl+shift+t.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/scale.lua?raw=1">scale</a></td>
+			<td>Provides support for dynamically adjusting the scale of the code font / UI (<code>ctrl+-</code>, <code>ctrl+=</code>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/scalestatus.lua?raw=1">scalestatus</a></td>
+			<td>Displays current scale (zoom) in status view (depends on scale plugin).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/selectionhighlight.lua?raw=1">selectionhighlight</a></td>
+			<td>Highlights regions of code that match the current selection (<a href="https://user-images.githubusercontent.com/3920290/80710883-5f597c80-8ae7-11ea-97f0-76dfacc08439.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/sort.lua?raw=1">sort</a></td>
+			<td>Sorts selected lines alphabetically.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/spellcheck.lua?raw=1">spellcheck</a></td>
+			<td>Underlines misspelt words (<a href="https://user-images.githubusercontent.com/3920290/79923973-9caa7400-842e-11ea-85d4-7a196a91ca50.png">screenshot</a>) — note: on Windows a <a href="https://github.com/dwyl/english-words/blob/master/words.txt"><code>words.txt</code></a> dictionary file must be placed beside the exe.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/tabnumbers.lua?raw=1">tabnumbers</a></td>
+			<td>Displays tab numbers from 1–9 next to their names (<a href="https://user-images.githubusercontent.com/16415678/101285362-007a8500-37e5-11eb-869b-c10eb9d9d902.png">screenshot</a>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/themeselect.lua?raw=1">themeselect</a></td>
+			<td>Select a theme based on filename of active document.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/titleize.lua?raw=1">titleize</a></td>
+			<td>Titleizes selected string (<code>hello world</code> =&gt; <code>Hello World</code>).</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/togglesnakecamel.lua?raw=1">togglesnakecamel</a></td>
+			<td>Toggles symbols between <code>snake_case</code> and <code>camelCase</code>.</td>
+		</tr><tr><td><a target="_blank" href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/unboundedscroll.lua?raw=1">unboundedscroll</a></td>
+			<td>Allows scrolling outside the bounds of a document.</td>
+		</tr></tbody>
+</table>
+
+					</article>
+				</div>
+					<div class="col-md-3">
+						<aside>
+
+
+						<div class="card border-dark mb-3">
+							<div class="card-header text-light bg-dark bg-primary">
+								<i class=" fa-"
+									aria-hidden="true"></i>
+								Follow Us
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+	<li class="nav-item">
+										<a class="nav-link" href="https://github.com/lite-xl/"
+											title="GitHub" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-github fa-fw"
+										aria-hidden="true"></i>
+										GitHub</a>
+									</li>
+	<li class="nav-item">
+										<a class="nav-link" href="https://discord.gg/RWzqC3nx7K"
+											title="Discord" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-discord fa-fw"
+										aria-hidden="true"></i>
+										Discord</a>
+									</li>
+	<li class="nav-item">
+										<a class="nav-link" href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#lite-xl"
+											title="IRC" style="padding: 0.35rem 0.25rem">
+										<i class="fas fa-hashtag fa-fw"
+										aria-hidden="true"></i>
+										IRC</a>
+									</li>
+	<li class="nav-item">
+										<a class="nav-link" href="/atom.xml"
+											title="Feed" style="padding: 0.35rem 0.25rem">
+										<i class="fas fa-rss fa-fw"
+										aria-hidden="true"></i>
+										Feed</a>
+									</li>
+	
+								</ul>
+							</div>
+						</div>
+
+						<div class="card border-dark mb-3">
+							<div class="card-header text-light bg-dark bg-primary">
+								<i class=" fa-"
+									aria-hidden="true"></i>
+								Getting Started
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+	<li class="nav-item">
+										<a class="nav-link" href="https://github.com/lite-xl/lite-xl/wiki/"
+											title="Wiki" style="padding: 0.35rem 0.25rem">
+										<i class="fas fa-book fa-fw"
+										aria-hidden="true"></i>
+										Wiki</a>
+									</li>
+	<li class="nav-item">
+										<a class="nav-link" href="https://github.com/lite-xl/lite-xl/issues/"
+											title="Issue Tracker" style="padding: 0.35rem 0.25rem">
+										<i class="fas fa-bug fa-fw"
+										aria-hidden="true"></i>
+										Issue Tracker</a>
+									</li>
+	
+								</ul>
+							</div>
+						</div>
+
+
+
+						</aside>
+					</div>
+			</div>
+			<hr>
+			<footer>
+				<p style="text-align:left;">
+					<span data-localize="footer_copyright">Copyright</span>
+						&copy; 2021
+					<a data-localize="footer_team" href="/lite-xl.github.io/en/team">
+						Lite XL Team</a>
+				</p>
+			</footer>
+
+		</div>
+		<script src="/lite-xl.github.io/assets/js/scripts.min.js"></script><!--
+		<script type="text/javascript" src="/lite-xl.github.io/assets/js/jquery.localize.js"></script>
+		<script type="text/javascript" src="/lite-xl.github.io/assets/js/language.js"></script>
+-->
+		<script type="text/javascript" src="/lite-xl.github.io/assets/js/anchor.min.js"></script>
+    <script>
+      anchors.options.placement = 'left';
+      anchors.add();
+    </script>
+    <script defer type="text/javascript" src="/lite-xl.github.io/assets/js/ekko-lightbox.min.js"></script>
+    <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox({});
+    });
+    </script>
+
+
+	</body>
+</html>

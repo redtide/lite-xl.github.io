@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Lite XL News</title>
+	<link href="https://lite-xl.github.io/lite-xl.github.io/atom.xml" rel="self"/>
+	<icon>https://lite-xl.github.io/lite-xl.github.io/assets/ico/favicon.ico</icon>
+	<link href="https://lite-xl.github.io/lite-xl.github.io/"/>
+	<updated>2021-09-02T11:23:18+00:00</updated>
+	<id>https://lite-xl.github.io/lite-xl.github.io/</id>
+
+	<entry>
+		<title>Documentation Website</title>
+		<author><name>redtide</name></author>
+		<link href="https://lite-xl.github.io/lite-xl.github.io/news/2021/05/29/documentation-website.html"/>
+		<published>2021-05-29T09:15:47+00:00</published>
+		<id>https://lite-xl.github.io/lite-xl.github.io/news/2021/05/29/documentation-website</id>
+		<content type="html">&lt;p&gt;Lite XL website.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Built on &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Most content is authored in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; format.&lt;/li&gt;
+  &lt;li&gt;Utilizes &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; for easy skinning and responsive design,
+making the website available to mobile devices.&lt;/li&gt;
+  &lt;li&gt;Utilizes &lt;a href=&quot;http://fontawesome.io/&quot;&gt;FontAwesome&lt;/a&gt; and &lt;a href=&quot;https://realfavicongenerator.net/&quot;&gt;Favicon Generator&lt;/a&gt; for content and website icons.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+	</entry>
+
+</feed>
