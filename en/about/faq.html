@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Screenshots - Lite XL</title>
+		<title>FAQ - Lite XL</title>
 
 		<meta name="author" content="redtide">
 		<meta name="web-author" content="redtide">
@@ -96,7 +96,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/faq"
+					href="/lite-xl.github.io/en/about/faq"
 				><i
 						class="fas fa-question fa-fw"
 						aria-hidden="true"
@@ -108,7 +108,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/features/"
+					href="/lite-xl.github.io/en/about/features/"
 				><i
 						class="fas fa-info fa-fw"
 						aria-hidden="true"
@@ -120,7 +120,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/screenshots/"
+					href="/lite-xl.github.io/en/about/screenshots/"
 				><i
 						class="fas fa-image fa-fw"
 						aria-hidden="true"
@@ -132,7 +132,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/contributors"
+					href="/lite-xl.github.io/en/about/contributors"
 				><i
 						class="fas fa-users fa-fw"
 						aria-hidden="true"
@@ -168,7 +168,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/usage"
+					href="/lite-xl.github.io/en/documentation/usage"
 				><i
 						class="fas fa-book fa-fw"
 						aria-hidden="true"
@@ -180,7 +180,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/build/"
+					href="/lite-xl.github.io/en/documentation/build/"
 				><i
 						class="fas fa-code fa-fw"
 						aria-hidden="true"
@@ -192,7 +192,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/keymap"
+					href="/lite-xl.github.io/en/documentation/keymap"
 				><i
 						class="fas fa-keyboard fa-fw"
 						aria-hidden="true"
@@ -228,7 +228,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/plugins"
+					href="/lite-xl.github.io/en/plugins/repository"
 				><i
 						class="fab fa-github fa-fw"
 						aria-hidden="true"
@@ -240,7 +240,7 @@
 				
 				<a
 					class="dropdown-item font-weight-bold"
-					href="/lite-xl.github.io/en/plugins-external"
+					href="/lite-xl.github.io/en/plugins/external"
 				><i
 						class="fas fa-link fa-fw"
 						aria-hidden="true"
@@ -291,7 +291,7 @@
 							<a
 								class="nav-link font-weight-bold"
 								data-localize="menu_downloads"
-								href="/lite-xl.github.io/en/downloads/"
+								href="/lite-xl.github.io/en/downloads"
 							><i
 								class="fas fa-download fa-fw"
 								aria-hidden="true"
@@ -317,9 +317,105 @@
 				<div class="col-md-9">
 					<article>
 
-						<h1>Screenshots</h1>
+						<h1>FAQ</h1>
 
-				<p>WIP</p>
+				<p>Here are some frequently-asked questions.</p>
+
+<h4 id="can-i-get-smart-autocompletion-intellisenselsp">Can I get smart autocompletion (intellisense/LSP)?</h4>
+
+<p>Check out the <a href="https://github.com/jgmdev/lite-xl-lsp">LSP</a> plugin.</p>
+
+<h4 id="where-is-the-integrated-terminal">Where is the integrated terminal?</h4>
+
+<p>Lite XL does not come with a terminal due to it’s complexity.
+For now, we have the <a href="https://github.com/franko/console">console</a> plugin to run a command and dump its output. (not interactive)</p>
+
+<h4 id="tabs-and-indent-size">Tabs and indent size?</h4>
+
+<p>In your user config (the cog icon in the file tree):</p>
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="n">tab_type</span> <span class="o">=</span> <span class="s2">"soft"</span> <span class="c1">-- soft for spaces, hard for real tabs (\t)</span>
+<span class="n">config</span><span class="p">.</span><span class="n">indent_size</span> <span class="o">=</span> <span class="mi">4</span>   <span class="c1">-- 4 spaces</span>
+</code></pre></div></div>
+
+<h4 id="how-to-bind-commands-to-keys">How to bind commands to keys?</h4>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">local</span> <span class="n">keymap</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">"core.keymap"</span>
+<span class="n">keymap</span><span class="p">.</span><span class="n">add</span> <span class="p">{</span> <span class="p">[</span><span class="s2">"ctrl+escape"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"core:quit"</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="how-to-unbind-commands-for-certain-keys">How to unbind commands for certain keys?</h4>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- the second parameter lets you override commands for certain keys</span>
+<span class="c1">-- in this case it maps it to nothing</span>
+<span class="n">keymap</span><span class="p">.</span><span class="n">add</span><span class="p">({</span> <span class="p">[</span><span class="s2">"ctrl+escape"</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span> <span class="p">},</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="how-to-get-commands-for-those-keybinds">How to get commands for those keybinds?</h4>
+
+<p>You can search for commands in the command palette.<br />
+For each command, replace the spaces in the right side with dashes.<br />
+For example: <code class="language-plaintext highlighter-rouge">Core: Find Command</code> → <code class="language-plaintext highlighter-rouge">core:find-command</code></p>
+
+<h4 id="vim-mode">Vim mode?</h4>
+
+<p>You need to <a href="https://github.com/eugenpt/lite-xl-vibe">vibe</a>.</p>
+
+<h4 id="plugin-recommendations">Plugin recommendations</h4>
+
+<p>Just in case you don’t want to comb through our <a href="https://github.com/lite-xl/lite-plugins">plugin repository</a>,
+these are a list of plugins that just makes Lite XL a lot more pleasant.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plugin</th>
+      <th>Use case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/autoinsert.lua?raw=1">autoinsert</a></td>
+      <td>Automatically insert closing brackets and quotes</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/bracketmatch.lua?raw=1">bracketmatch</a></td>
+      <td>Highlight matching brackets</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/ephemeraldocviews.lua?raw=1">ephemeraldocviews</a></td>
+      <td>Ephemeral tabs (previewing files without creating multiple tabs)</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/vincens2005/lite-xl-gitdiff-highlight">gitdiff_highlight</a></td>
+      <td>Git diff gutter</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/linecopypaste.lua?raw=1">linecopypaste</a></td>
+      <td>Copy/Paste lines when nothing is selected</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/liquid600pgm/lintplus">lint+</a></td>
+      <td>Linter support</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/minimap.lua?raw=1">minimap</a></td>
+      <td>Minimap</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/lite-xl/lite-plugins/blob/master/plugins/selectionhighlight.lua?raw=1">selectionhighlight</a></td>
+      <td>Highlight code that matches the selection</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/vincens2005/lite-xl-discord">lite-xl-discord</a></td>
+      <td>Discord rich presence</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="wheres-feature-x-how-about-y">Where’s feature X? How about Y?</h4>
+
+<p>You can get more info in the <a href="/lite-xl.github.io/en/about/features">Features page</a>.</p>
+
 
 					</article>
 				</div>
@@ -405,7 +501,7 @@
 				<p style="text-align:left;">
 					<span data-localize="footer_copyright">Copyright</span>
 						&copy; 2021
-					<a data-localize="footer_team" href="/lite-xl.github.io/en/team">
+					<a data-localize="footer_team" href="/lite-xl.github.io/en/about/team">
 						Lite XL Team</a>
 				</p>
 			</footer>
