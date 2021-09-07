@@ -321,7 +321,263 @@
 
 <p>A lightweight text editor written in Lua, adapted from <a href="https://github.com/rxi/lite/">lite</a>.</p>
 
-<p><img src="/lite-xl.github.io/assets/img/screenshots/editor.png" alt="Screenshot" /></p>
+<div class="carousel__holder">
+    <div class="carousel">
+        
+          <input class="carousel__activator" type="radio" name="carousel" id="a" checked="checked" />
+        
+          <input class="carousel__activator" type="radio" name="carousel" id="b" />
+        
+        
+          
+          
+          
+          
+          <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="b"></label>
+              <label class="carousel__control carousel__control--forward" for="b"></label>
+          </div>
+        
+          
+          
+          
+          
+          <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="a"></label>
+              <label class="carousel__control carousel__control--forward" for="a"></label>
+          </div>
+        
+        <div class="carousel__track">
+          <ul>
+            
+            <li class="carousel__slide" style="background-image: url('/assets/img/screenshots/editor.png');"></li>
+            
+            <li class="carousel__slide" style="background-image: url('/assets/img/screenshots/editor2.png');"></li>
+            
+          </ul>
+        </div>
+        <div class="carousel__indicators">
+            
+              <label class="carousel__indicator" for="a"></label>
+            
+              <label class="carousel__indicator" for="b"></label>
+            
+        </div>
+    </div>
+</div>
+
+<style>
+.carousel__holder {width: 100%; position: relative; padding-bottom: 50%; margin: 1rem 0 1rem;}
+.carousel {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  padding: 0;
+}
+.carousel__controls,
+.carousel__activator {
+  display: none;
+}
+
+.carousel__activator:nth-of-type(1):checked ~ .carousel__track {
+  -webkit-transform: translateX(-000%);
+          transform: translateX(-000%);
+}
+.carousel__activator:nth-of-type(1):checked ~ .carousel__slide:nth-of-type(1) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.carousel__activator:nth-of-type(1):checked ~ .carousel__controls:nth-of-type(1) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(1):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(1) {
+  opacity: 1;
+}
+
+.carousel__activator:nth-of-type(2):checked ~ .carousel__track {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.carousel__activator:nth-of-type(2):checked ~ .carousel__slide:nth-of-type(2) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.carousel__activator:nth-of-type(2):checked ~ .carousel__controls:nth-of-type(2) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(2):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(2) {
+  opacity: 1;
+}
+
+
+.carousel__control {
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  top: 50%;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  opacity: 0.35;
+  opacity: 1;
+  outline: 0;
+  z-index: 3;
+}
+.carousel__control:hover {
+  opacity: 1;
+}
+.carousel__control--backward {
+  left: 20px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+.carousel__control--forward {
+  right: 20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.carousel__indicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.carousel__indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  display: inline-block;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.35;
+  margin: 0 2.5px 0 2.5px;
+}
+.carousel__indicator:hover {
+  opacity: 0.75;
+}
+.carousel__track {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+.carousel__track .carousel__slide {
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.carousel__track .carousel__slide:nth-of-type(1) {
+  -webkit-transform: translateX(000%);
+          transform: translateX(000%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(2) {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+
+.carousel--scale .carousel__slide {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.carousel__slide {
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+}
+.carousel__slide .overlay {height: 100%;}
+.carousel--thumb .carousel__indicator {
+  height: 30px;
+  width: 30px;
+}
+.carousel__indicator {
+  background-color: #fafafa;
+}
+
+.carousel__slide:nth-of-type(1),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(2),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
+  background-size: cover;
+  background-position: center;
+}
+
+</style>
+
+<script>
+  function isVisible(el) {
+        while (el) {
+            if (el === document) {
+                return true;
+            }
+
+            var $style = window.getComputedStyle(el, null);
+
+            if (!el) {
+                return false;
+            } else if (!$style) {
+                return false;
+            } else if ($style.display === 'none') {
+                return false;
+            } else if ($style.visibility === 'hidden') {
+                return false;
+            } else if (+$style.opacity === 0) {
+                return false;
+            } else if (($style.display === 'block' || $style.display === 'inline-block') &&
+                $style.height === '0px' && $style.overflow === 'hidden') {
+                return false;
+            } else {
+                return $style.position === 'fixed' || isVisible(el.parentNode);
+            }
+        }
+  }
+  
+  setInterval(function(){
+    var j=0;
+    var elements = document.querySelectorAll('.carousel__control--forward');
+    for(i=(elements.length - 1);i>-1;i--) {
+      if(isVisible(elements[i])) j=i;
+    }
+    elements[j].click();
+  },7000);
+  
+</script>
 
 <h2><a href="/news/2021/05/29/documentation-website/">Documentation Website</a></h2>
 <p>
