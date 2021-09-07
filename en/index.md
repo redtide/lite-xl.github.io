@@ -4,10 +4,7 @@ date_fmt: "%d %B %Y"
 ---
 A lightweight text editor written in Lua, adapted from [lite].
 
-![Screenshot]
-
+{% include carousel.liquid height="50" unit="%" duration="7" %}
 {% include post.liquid %}
 
-
-[lite]:       https://github.com/rxi/lite/
-[Screenshot]: {{ 'assets/img/screenshots/editor.png' | relative_url }}
+[lite]: https://github.com/rxi/lite/
