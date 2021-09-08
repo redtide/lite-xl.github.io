@@ -346,12 +346,12 @@ Otherwise, if they are present, they will be used to compile Lite XL.</p>
 <p>If you compile Lite XL yourself,
 it is recommended to use the script <code class="language-plaintext highlighter-rouge">build-packages.sh</code>:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash build-packages.sh &lt;<span class="nb">arch</span><span class="o">&gt;</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash build-packages.sh <span class="nt">-h</span>
 </code></pre></div></div>
 
-<p>The script will run Meson and create a zip file with the application or,
-for linux, a tar compressed archive.
-Lite XL can be easily installed by unpacking the archive in any directory of your choice.</p>
+<p>The script will run Meson and create a tar compressed archive with the application or,
+for Windows, a zip file. Lite XL can be easily installed
+by unpacking the archive in any directory of your choice.</p>
 
 <p>On Windows two packages will be created, one called “portable” using the “data”
 folder next to the executable and the other one using a unix-like file layout.

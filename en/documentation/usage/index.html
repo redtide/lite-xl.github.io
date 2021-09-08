@@ -334,8 +334,8 @@ while remaining generally compatible with it.</p>
 project’s code and other data resides.</p>
 
 <p>To open a specific project directory the directory name can be passed
-as a command-line argument <em>(<code class="language-plaintext highlighter-rouge">.</code> can be passed to use the current directory)</em> or
-the directory can be dragged onto either the executable or a running instance.</p>
+as a command-line argument <em>(<span class="keycombo separated" title="Period (.)"><kbd class="key symbol">.</kbd></span> can be passed to use the current directory)</em>
+or the directory can be dragged onto either the executable or a running instance.</p>
 
 <p>Once started the project directory can be changed using the command
 <code class="language-plaintext highlighter-rouge">core:change-project-folder</code>. The command will close all the documents
@@ -347,14 +347,15 @@ project directory.</p>
 
 <p>The main way of opening files in Lite XL is through the <code class="language-plaintext highlighter-rouge">core:find-file</code> command
 — this provides a fuzzy finder over all of the project’s files and can be
-opened using the <strong><code class="language-plaintext highlighter-rouge">ctrl+p</code></strong> shortcut by default.</p>
+opened using the <span class="keycombo separated" title="Control-P"><kbd class="mod">Control</kbd>-<kbd class="key symbol">P</kbd></span> shortcut by default.</p>
 
 <p>Commands can be run using keyboard shortcuts, or by using the <code class="language-plaintext highlighter-rouge">core:find-command</code>
-command bound to <strong><code class="language-plaintext highlighter-rouge">ctrl+shift+p</code></strong> by default. For example, pressing
-<code class="language-plaintext highlighter-rouge">ctrl+shift+p</code> and typing <code class="language-plaintext highlighter-rouge">newdoc</code> then pressing <code class="language-plaintext highlighter-rouge">return</code> would open a new
-document. The current keyboard shortcut for a command can be seen to the right
-of the command name on the command finder, thus to find the shortcut for a command
-<code class="language-plaintext highlighter-rouge">ctrl+shift+p</code> can be pressed and the command name typed.</p>
+command bound to <span class="keycombo separated" title="Control-Shift-P"><kbd class="mod">Control</kbd>-<kbd class="mod">Shift</kbd>-<kbd class="key symbol">P</kbd></span> by default. For example, pressing
+the above combination and typing <code class="language-plaintext highlighter-rouge">newdoc</code> then pressing <span class="keycombo separated" title="Return Key"><kbd class="key symbol">&#9166;</kbd></span>
+would open a new document. The current keyboard shortcut for a command
+can be seen to the right of the command name on the command finder, thus to find
+the shortcut for a command <span class="keycombo separated" title="Control-Shift-P"><kbd class="mod">Control</kbd>-<kbd class="mod">Shift</kbd>-<kbd class="key symbol">P</kbd></span> can be pressed
+and the command name typed.</p>
 
 <h2 id="user-data-directories">User Data Directories</h2>
 
@@ -410,7 +411,7 @@ command is run it will be created.</p>
 <p>In addition to the project directories it is possible to add other directories
 using the command <code class="language-plaintext highlighter-rouge">core:add-directory</code>.
 Once added a directory it will be shown in the tree-view on the left side and
-the additional files will be reachable using the <code class="language-plaintext highlighter-rouge">ctrl+p</code> command (find file).
+the additional files will be reachable using the <span class="keycombo separated" title="Control-P"><kbd class="mod">Control</kbd>-<kbd class="key symbol">P</kbd></span> command (find file).
 The additonal files will be also visible when searching across the project.</p>
 
 <p>The additional directories can be removed using the command <code class="language-plaintext highlighter-rouge">core:remove-directory</code>.</p>
@@ -428,7 +429,7 @@ tree-view to create a new empty subdirectory.</p>
 
 <h2 id="commands">Commands</h2>
 
-<p>Commands are used both through the command finder (<code class="language-plaintext highlighter-rouge">ctrl+shift+p</code>) and
+<p>Commands are used both through the command finder (<span class="keycombo separated" title="Control-Shift-P"><kbd class="mod">Control</kbd>-<kbd class="mod">Shift</kbd>-<kbd class="key symbol">P</kbd></span>) and
 by Lite XL’s keyboard shortcut system. Commands consist of 3 components:</p>
 
 <ul>
@@ -465,12 +466,12 @@ user module) by calling the <code class="language-plaintext highlighter-rouge">c
 <h2 id="keymap">Keymap</h2>
 
 <p>All keyboard shortcuts are handled by the <code class="language-plaintext highlighter-rouge">core.keymap</code> module.
-A key binding maps a “stroke” (eg. <code class="language-plaintext highlighter-rouge">ctrl+q</code>) to one or more commands
+A key binding maps a “stroke” (eg. <span class="keycombo separated" title="Control-Q"><kbd class="mod">Control</kbd>-<kbd class="key symbol">Q</kbd></span>) to one or more commands
 (eg. <code class="language-plaintext highlighter-rouge">core:quit</code>). When the shortcut is pressed Lite XL will iterate each command
 assigned to that key and run the <em>predicate function</em> for that command — if the
 predicate passes it stops iterating and runs the command.</p>
 
-<p>An example of where this used is the default binding of the <code class="language-plaintext highlighter-rouge">tab</code> key:</p>
+<p>An example of where this used is the default binding of the <span class="keycombo separated" title="Tab Key"><kbd class="key symbol">&#8677;</kbd></span> key:</p>
 
 <div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="p">[</span><span class="s2">"tab"</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">"command:complete"</span><span class="p">,</span> <span class="s2">"doc:indent"</span> <span class="p">},</span>
 </code></pre></div></div>
